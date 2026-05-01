@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>SNOWDEN Unlock the Record</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -30,8 +30,28 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 
 /* SECTION 1: HERO full viewport, normal */
 .hero{position:fixed;top:0;left:0;width:100%;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;z-index:1}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 8s ease-out}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.97) 0%,rgba(0,0,0,0.55) 55%,rgba(0,0,0,0.2) 100%)}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.08);
+  filter: contrast(1.05) brightness(0.85);
+  transition: transform 8s ease-out;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 15, 35, 0.85) 0%,
+    rgba(8, 15, 35, 0.55) 40%,
+    rgba(8, 15, 35, 0.25) 70%,
+    rgba(8, 15, 35, 0.1) 100%
+  );
+}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 40px;max-width:800px}
 .hero-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#E88080;margin-bottom:28px}
 .hero-h1{font-family:'DM Serif Display',serif;font-size:clamp(72px,10vw,120px);font-weight:900;line-height:0.88;color:#FFFFFF;letter-spacing:-5px;margin-bottom:32px}
@@ -151,7 +171,7 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 <section class="hero">
 
   <img 
-    src="https://images.nga.gov/iiif/130555/full/2000,/0/default.jpg" 
+    src="https://images.nga.gov/iiif/130555/full/2000,/0/default.jpg"
     class="hero-bg"
     id="heroBg"
   >
