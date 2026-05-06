@@ -2,5 +2,25 @@
   "dependencies": {
     "geist": "^1.7.0",
     "lucide-react": "^1.14.0"
-  }
+  },
+  "name": "foaiflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amanuelasfaw365/foaiflow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/amanuelasfaw365/foaiflow/issues"
+  },
+  "homepage": "https://github.com/amanuelasfaw365/foaiflow#readme"
 }
