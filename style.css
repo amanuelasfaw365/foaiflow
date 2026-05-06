@@ -144,7 +144,8 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 
 /* SECTION 7: CTA */
 .cta-sec{
-  background-image: url('/cta-image.jpg'); /* correct path */
+  background-color: #0B1220;
+  background-image: url('public/cta-image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
