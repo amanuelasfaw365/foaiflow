@@ -106,7 +106,7 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 .process-h2{font-family:'DM Serif Display',serif;font-size:clamp(44px,5.5vw,72px);font-weight:900;color:#FFFFFF;letter-spacing:-3px;line-height:0.95;margin-bottom:28px}
 .process-h2 em{font-style:italic;color:#3B82F6}
 .process-body{font-size:15px;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.85;max-width:560px;margin-bottom:32px}
-.process-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#1D4ED8;padding:8px 16px;border:1px solid #3A0000;display:inline-block}
+.process-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#1D4ED8;padding:8px 16px;border:1px solid #1D4ED8;display:inline-block}
 .process-bg-num{position:absolute;right:8vw;top:50%;transform:translateY(-50%);font-family:'DM Serif Display',serif;font-size:clamp(160px,20vw,260px);font-weight:900;color:#FFFFFF;opacity:0.03;line-height:1;pointer-events:none;user-select:none}
 .process-progress{position:absolute;bottom:48px;left:50%;transform:translateX(-50%);display:flex;gap:10px;align-items:center}
 .prog-line{width:40px;height:2px;background:rgba(255,255,255,0.15);transition:background 0.4s,width 0.4s}
