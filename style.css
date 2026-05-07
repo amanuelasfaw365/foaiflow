@@ -132,10 +132,13 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 .wif-list li::before{content:'•';position:absolute;left:0;color:#3B82F6;font-weight:400}
 
 /* SECTION: BLACKSITE */
-.blacksite{background:#000000;min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;z-index:13;overflow:hidden}
-.blacksite::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,0.015) 2px,rgba(255,255,255,0.015) 4px);pointer-events:none}
-.blacksite-inner{max-width:1200px;width:100%;margin:0 auto;padding:0 10vw;position:relative;z-index:1}
-.blacksite-title{font-family:'Space Mono','Courier New',monospace;font-size:clamp(56px,9vw,128px);font-weight:700;color:#FFFFFF;letter-spacing:0.08em;line-height:1;text-transform:uppercase}
+.blacksite{background:#000000;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:13;overflow:hidden;padding:10vh 10vw}
+.blacksite::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,0.013) 2px,rgba(255,255,255,0.013) 4px);pointer-events:none}
+.blacksite-inner{text-align:center;position:relative;z-index:1;margin-bottom:5vh}
+.blacksite-title{font-family:'Space Mono','Courier New',monospace;font-size:clamp(48px,8vw,120px);font-weight:700;color:#FFFFFF;letter-spacing:0.08em;line-height:1;text-transform:uppercase}
+.blacksite-sub{font-family:'Space Mono','Courier New',monospace;font-size:clamp(10px,1.1vw,15px);color:rgba(255,255,255,0.5);letter-spacing:0.12em;margin-top:20px;text-transform:uppercase;line-height:1.7}
+.globe-wrap{width:min(540px,74vw);height:min(540px,74vw);position:relative;z-index:1}
+.globe-wrap canvas{display:block;width:100%!important;height:100%!important}
 
 /* SECTION 5: KILL white */
 .kill{background:#FAFAF8;display:grid;grid-template-columns:1fr 1fr;min-height:100vh;position:relative;z-index:14}

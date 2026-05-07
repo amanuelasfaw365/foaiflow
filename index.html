@@ -223,7 +223,9 @@
 <section class="blacksite" id="blacksite">
   <div class="blacksite-inner">
     <h2 class="blacksite-title">BLACKSITE</h2>
+    <p class="blacksite-sub">The World&rsquo;s First Encrypted Whistleblower Intelligence Network.</p>
   </div>
+  <div class="globe-wrap" id="globe-wrap"></div>
 </section>
 
 <!-- KILL PAGE -->
@@ -324,7 +326,113 @@
   <div class="f-copy">© 2026 SNOWDEN. All rights reserved.</div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 <script>
+// 3D GLOBE — Three.js + D3 equirectangular canvas texture
+window.addEventListener('load', function() {
+  const wrap = document.getElementById('globe-wrap');
+  if (!wrap) return;
+  const W = wrap.offsetWidth || 540;
+  const H = wrap.offsetHeight || 540;
+
+  // --- Build equirectangular texture on an offscreen canvas ---
+  const texW = 2048, texH = 1024;
+  const offCanvas = document.createElement('canvas');
+  offCanvas.width = texW; offCanvas.height = texH;
+  const tc = offCanvas.getContext('2d');
+
+  function buildGlobe(world) {
+    const proj = d3.geoEquirectangular().scale(texH / Math.PI).translate([texW / 2, texH / 2]);
+    const geoPath = d3.geoPath().projection(proj).context(tc);
+    const graticule = d3.geoGraticule()();
+    const countries = topojson.feature(world, world.objects.countries);
+    const borders = topojson.mesh(world, world.objects.countries, function(a, b){ return a !== b; });
+
+    // Ocean
+    tc.fillStyle = '#060606';
+    tc.fillRect(0, 0, texW, texH);
+
+    // Graticule (lat/lon grid)
+    tc.beginPath(); geoPath(graticule);
+    tc.strokeStyle = 'rgba(255,255,255,0.06)'; tc.lineWidth = 0.7; tc.stroke();
+
+    // Land fill
+    tc.beginPath(); geoPath(countries);
+    tc.fillStyle = '#2a2a2a'; tc.fill();
+
+    // Country borders
+    tc.beginPath(); geoPath(borders);
+    tc.strokeStyle = 'rgba(255,255,255,0.45)'; tc.lineWidth = 1.2; tc.stroke();
+
+    // Coastline highlight
+    tc.beginPath(); geoPath(countries);
+    tc.strokeStyle = 'rgba(255,255,255,0.18)'; tc.lineWidth = 0.6; tc.stroke();
+
+    // --- Three.js scene ---
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(W, H);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    wrap.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(38, W / H, 0.1, 1000);
+    camera.position.z = 2.85;
+
+    // Earth
+    const earthTex = new THREE.CanvasTexture(offCanvas);
+    const earth = new THREE.Mesh(
+      new THREE.SphereGeometry(1, 80, 80),
+      new THREE.MeshPhongMaterial({
+        map: earthTex,
+        specular: new THREE.Color(0x1a1a1a),
+        shininess: 12
+      })
+    );
+    earth.rotation.x = 0.28;
+    scene.add(earth);
+
+    // Atmosphere rim
+    const atm = new THREE.Mesh(
+      new THREE.SphereGeometry(1.055, 64, 64),
+      new THREE.MeshPhongMaterial({
+        color: 0xffffff, transparent: true, opacity: 0.045, side: THREE.BackSide
+      })
+    );
+    scene.add(atm);
+
+    // Outer haze ring
+    const haze = new THREE.Mesh(
+      new THREE.SphereGeometry(1.10, 64, 64),
+      new THREE.MeshPhongMaterial({
+        color: 0xffffff, transparent: true, opacity: 0.012, side: THREE.BackSide
+      })
+    );
+    scene.add(haze);
+
+    // Lighting
+    scene.add(new THREE.AmbientLight(0xffffff, 0.22));
+    const sun = new THREE.DirectionalLight(0xffffff, 1.15);
+    sun.position.set(4, 2, 5);
+    scene.add(sun);
+    const fill = new THREE.DirectionalLight(0xffffff, 0.12);
+    fill.position.set(-4, -2, -3);
+    scene.add(fill);
+
+    // Animate
+    (function animate() {
+      requestAnimationFrame(animate);
+      earth.rotation.y += 0.0014;
+      renderer.render(scene, camera);
+    })();
+  }
+
+  fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+    .then(function(r){ return r.json(); })
+    .then(buildGlobe);
+});
+
 // SCROLL-DRIVEN HORIZONTAL PROCESS SECTION
 const processOuter = document.getElementById('process');
 const processTrack = document.getElementById('processTrack');
