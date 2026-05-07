@@ -132,9 +132,10 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 .wif-list li::before{content:'•';position:absolute;left:0;color:#3B82F6;font-weight:400}
 
 /* SECTION: BLACKSITE */
-.blacksite{background:#000000;position:relative;z-index:13;padding:16vh 0}
-.blacksite-inner{max-width:1200px;margin:0 auto;padding:0 10vw}
-.blacksite-title{font-family:'Times New Roman',Times,serif;font-size:clamp(72px,10vw,140px);font-weight:700;color:#FFFFFF;letter-spacing:-4px;line-height:1}
+.blacksite{background:#000000;min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;z-index:13;overflow:hidden}
+.blacksite::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,0.015) 2px,rgba(255,255,255,0.015) 4px);pointer-events:none}
+.blacksite-inner{max-width:1200px;width:100%;margin:0 auto;padding:0 10vw;position:relative;z-index:1}
+.blacksite-title{font-family:'Space Mono','Courier New',monospace;font-size:clamp(56px,9vw,128px);font-weight:700;color:#FFFFFF;letter-spacing:0.08em;line-height:1;text-transform:uppercase}
 
 /* SECTION 5: KILL white */
 .kill{background:#FAFAF8;display:grid;grid-template-columns:1fr 1fr;min-height:100vh;position:relative;z-index:14}
