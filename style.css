@@ -134,7 +134,7 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 /* SECTION: BLACKSITE */
 .blacksite{background:#000000;min-height:100vh;display:flex;flex-direction:column;position:relative;z-index:13;overflow:hidden;padding:10vh 10vw}
 .blacksite::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,0.013) 2px,rgba(255,255,255,0.013) 4px);pointer-events:none}
-.blacksite-inner{position:relative;z-index:1;margin-bottom:6vh}
+.blacksite-inner{position:relative;z-index:1;margin-bottom:6vh;text-align:center}
 .blacksite-title{font-family:'Space Mono','Courier New',monospace;font-size:clamp(48px,8vw,120px);font-weight:700;color:#FFFFFF;letter-spacing:0.08em;line-height:1;text-transform:uppercase}
 .blacksite-sub{font-family:'Space Mono','Courier New',monospace;font-size:clamp(10px,1.1vw,15px);color:rgba(255,255,255,0.5);letter-spacing:0.12em;margin-top:20px;text-transform:uppercase;line-height:1.7}
 .bs-grid{display:grid;grid-template-columns:1fr 1fr;flex:1;position:relative;z-index:1;border:1px solid rgba(255,255,255,0.1)}
@@ -142,7 +142,7 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 .bs-block{padding:48px 44px;flex:1}
 .bs-block:first-child{border-bottom:1px solid rgba(255,255,255,0.1)}
 .bs-right{display:flex;align-items:center;justify-content:center;padding:44px}
-.bs-label{font-family:'Space Mono','Courier New',monospace;font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:22px}
+.bs-label{font-family:'Space Mono','Courier New',monospace;font-size:15px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#FFFFFF;margin-bottom:22px}
 .bs-body{font-family:'Space Mono','Courier New',monospace;font-size:12px;line-height:2.05;color:rgba(255,255,255,0.62);font-weight:400}
 .globe-wrap{width:100%;max-width:420px;aspect-ratio:1;position:relative;z-index:1}
 .globe-wrap canvas{display:block;width:100%!important;height:100%!important;background:transparent!important}
