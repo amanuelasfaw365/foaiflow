@@ -145,6 +145,7 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 
 /* SECTION 6: FAQ */
 .faq-sec{background-image:url('public/look-up.jpg');background-size:cover;background-position:center;padding:16vh 0 14vh;position:relative;z-index:15}
+.faq-sec .sec-label{color:#FFFFFF}
 .faq-inner{max-width:840px;margin:0 auto;padding:0 10vw}
 .faq-h{font-family:'EB Garamond',serif;font-size:clamp(40px,5vw,60px);font-weight:700;color:#FFFFFF;letter-spacing:-2px;margin-bottom:12px}
 .faq-sub{font-family:'EB Garamond',serif;font-size:14px;font-weight:700;color:#FFFFFF;margin-bottom:56px;font-style:italic}
@@ -158,8 +159,8 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 .faq-a strong{color:#FFFFFF;font-weight:700}
 
 /* SECTION 7: CTA */
-.cta-sec{background-color:#0B1220;background-image:url('public/cta-image.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 40px;position:relative;z-index:16;filter:contrast(1.1) brightness(0.9)}
-.cta-sec::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,25,60,0.65) 0%,rgba(10,25,60,0.55) 40%,rgba(0,0,0,0.6) 100%);z-index:0}
+.cta-sec{background-color:#0B1220;background-image:url('public/cta-image.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 40px;position:relative;z-index:16;filter:contrast(1.0) brightness(1.2)}
+.cta-sec::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,25,60,0.35) 0%,rgba(10,25,60,0.2) 55%,rgba(250,250,248,1) 100%);z-index:0}
 .cta-inner{max-width:700px;position:relative;z-index:1}
 .cta-h{font-family:'DM Serif Display',serif;font-size:clamp(52px,7vw,88px);font-weight:900;color:#FFFFFF;letter-spacing:-4px;line-height:0.9;margin-bottom:20px}
 .cta-sub{font-size:15px;font-weight:300;color:#FFFFFF;opacity:0.8;margin-bottom:40px;line-height:1.75}
