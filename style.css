@@ -98,7 +98,7 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 .pain-b{font-size:14px;font-weight:300;line-height:1.75;color:#444440}
 
 /* SECTION 3: HOW IT WORKS — fixed starry-night background, EB Garamond, all white */
-.process-outer{position:relative;background-image:url('/stary-night.jpg');background-attachment:fixed;background-size:cover;background-position:center;background-repeat:no-repeat;z-index:11}
+.process-outer{position:relative;background-color:#050a18;background-image:url('/stary-night.jpg');background-attachment:fixed;background-size:cover;background-position:center;background-repeat:no-repeat;z-index:11}
 .process-sticky{position:sticky;top:0;height:100vh;overflow:hidden}
 .process-track{display:flex;height:100%;will-change:transform}
 .process-panel{flex:0 0 100vw;height:100%;display:flex;align-items:center;justify-content:center;padding:0 10vw;position:relative}
