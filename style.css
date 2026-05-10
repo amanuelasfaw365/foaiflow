@@ -14,7 +14,7 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 
 /* NAV */
 .nav{position:fixed;top:28px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(10,10,10,0.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:10px 20px;display:flex;align-items:center;gap:24px;white-space:nowrap}
-.nav-logo{font-family:'DM Serif Display',serif;font-size:15px;font-weight:900;color:#FFFFFF;letter-spacing:-0.5px;text-decoration:none}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:15px;font-weight:900;color:#1E3A8A;letter-spacing:-0.5px;text-decoration:none}
 .nav-logo span{color:#3B82F6}
 .nav-links{display:flex;gap:24px;align-items:center}
 .nav-links a{font-size:11px;font-weight:400;color:rgba(255,255,255,0.65);text-decoration:none;letter-spacing:0.5px;transition:color 0.2s}
@@ -160,13 +160,13 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 
 /* SECTION 7: CTA */
 .cta-sec{background-color:#0B1220;background-image:url('public/cta-image.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;min-height:80vh;display:flex;align-items:flex-start;justify-content:center;text-align:center;padding:8vh 40px 0;position:relative;z-index:16;filter:contrast(1.0) brightness(1.2)}
-.cta-sec::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,25,60,0.35) 0%,rgba(10,25,60,0.2) 55%,rgba(250,250,248,1) 100%);z-index:0}
+.cta-sec::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,25,60,0.35) 0%,rgba(10,25,60,0.2) 55%,rgba(255,255,255,1) 100%);z-index:0}
 .cta-inner{max-width:700px;position:relative;z-index:1}
 .cta-h{font-family:'DM Serif Display',serif;font-size:clamp(38px,5vw,64px);font-weight:900;color:#FFFFFF;letter-spacing:-3px;line-height:0.95;margin-bottom:16px}
 .cta-sub{font-size:13px;font-weight:300;color:#FFFFFF;opacity:0.8;margin-bottom:40px;line-height:1.75}
 
 /* FOOTER */
-.footer{background:#FAFAF8;padding:22px 56px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:17}
+.footer{background:#FFFFFF;padding:22px 56px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:17}
 .f-logo{font-family:'DM Serif Display',serif;font-size:16px;font-weight:900;color:#1E3A8A}
 .f-links{display:flex;gap:28px}
 .f-links a{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888880;text-decoration:none}
