@@ -130,9 +130,9 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 .wif-list li::before{content:'•';position:absolute;left:0;color:#FFFFFF;font-weight:700}
 
 /* SECTION 5: KILL white */
-.kill{background-image:url('public/stary-night.jpg');background-size:cover;background-position:center;display:grid;grid-template-columns:1fr 1fr;min-height:100vh;position:relative;z-index:14}
+.kill{background-image:url('public/sunrise-cave.png');background-size:cover;background-position:center;display:grid;grid-template-columns:1fr 1fr;min-height:100vh;position:relative;z-index:14}
 .kill-left{padding:12vh 72px;display:flex;flex-direction:column;justify-content:center;border-right:2px solid rgba(255,255,255,0.2)}
-.kill-badge{background:#1E3A8A;color:#FFFFFF;font-family:'EB Garamond',serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 14px;display:inline-block;margin-bottom:28px}
+.kill-badge{background:rgba(255,255,255,0.15);color:#FFFFFF;font-family:'EB Garamond',serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 14px;display:inline-block;margin-bottom:28px}
 .kill-h{font-family:'EB Garamond',serif;font-size:clamp(32px,3.5vw,48px);font-weight:700;color:#FFFFFF;letter-spacing:-1.5px;line-height:1.05;margin-bottom:24px}
 .kill-h em{font-style:italic;color:#FFFFFF}
 .kill-body{font-family:'EB Garamond',serif;font-size:14px;font-weight:700;color:#FFFFFF;line-height:1.8;margin-bottom:36px;max-width:420px}
@@ -158,7 +158,7 @@ body{font-family:'Inter',sans-serif;background:#0B1220;color:#0A0A0A;overflow-x:
 .faq-a strong{color:#1E3A8A;font-weight:500}
 
 /* SECTION 7: CTA */
-.cta-sec{background-color:#0B1220;background-image:url('/cta-image.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 40px;position:relative;z-index:16;filter:contrast(1.1) brightness(0.9)}
+.cta-sec{background-color:#0B1220;background-image:url('public/cta-image.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 40px;position:relative;z-index:16;filter:contrast(1.1) brightness(0.9)}
 .cta-sec::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,25,60,0.65) 0%,rgba(10,25,60,0.55) 40%,rgba(0,0,0,0.6) 100%);z-index:0}
 .cta-inner{max-width:700px;position:relative;z-index:1}
 .cta-h{font-family:'DM Serif Display',serif;font-size:clamp(52px,7vw,88px);font-weight:900;color:#FFFFFF;letter-spacing:-4px;line-height:0.9;margin-bottom:20px}
